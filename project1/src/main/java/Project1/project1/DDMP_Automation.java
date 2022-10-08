@@ -103,7 +103,7 @@ public class DDMP_Automation {
 	      driver.findElement(By.id("mobileNumber")).sendKeys("50994471");
 	      driver.findElement(By.id("email")).sendKeys("james@rechargeindia.com");
 	      Thread.sleep(6000);
-	      driver.findElement(By.id("btn_AddAddress")).click();
+	      driver.findElement(By.id("btn_AddAddress")).click(); // to Save the Address page
 	      
 	    //Users tab
 	      Thread.sleep(6000);
@@ -115,7 +115,7 @@ public class DDMP_Automation {
 	      driver.findElement(By.id("txtEmailId")).sendKeys("james667@rechargeindia.com");
 	      driver.findElement(By.id("btn_usersave")).click();
 	      Thread.sleep(6000);
-	      driver.findElement(By.id("partnerUserSave")).click();
+	      driver.findElement(By.id("partnerUserSave")).click(); // to Save the Users page
 }
 
 }
