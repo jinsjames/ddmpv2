@@ -61,20 +61,21 @@ public class DDMP_Automation {
 		  HCategory.selectByValue("3");
 		  
 		  driver.findElement(By.xpath("//body/div[11]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]")).click();
-		  /*
-		  Thread.sleep(3000);
-		  wait.until(ExpectedConditions.visibilityOfElementLocated (By.id("ClassificationId")));
+		  
+		  
+
 		  Select Classification = new Select(driver.findElement(By.id("ClassificationId")));
 		  Classification.selectByValue("1");
 		  
-		   */
+		   
+		 
 		  
 		  Select ComType = new Select(driver.findElement(By.id("CompanyTypeId")));
 		  ComType.selectByValue("3");
 		  
-		  driver.findElement(By.id("cr")).sendKeys("8056AUT");
-		  driver.findElement(By.id("crExpiryDate")).click();
-//		  driver.findElement(By.id("review-expiry")).sendKeys("06/10/2023");
+		  driver.findElement(By.id("cr")).sendKeys("8058AUT");
+//		  driver.findElement(By.id("crExpiryDate")).click();
+//		  driver.findElement(By.id("review-")).sendKeys("06/10/2023");
 //		  
 		  //to upload KYC Doc
 	      WebElement uploadKYCdoc = driver.findElement(By.id("uploaddocFile"));
@@ -83,13 +84,21 @@ public class DDMP_Automation {
 		 // to Save the General page
 	      Thread.sleep(6000);
 	      driver.findElement(By.id("btn_Add")).click();
+	      
+	      
 	      //Address tab
 	      Thread.sleep(6000);
 	      driver.findElement(By.id("addresses")).sendKeys("Doha");
 	      driver.findElement(By.id("buildingAdd")).sendKeys("Oxford");
 	      driver.findElement(By.id("poBox")).sendKeys("123456");
 	      driver.findElement(By.id("nfc")).sendKeys("en000000");
-	      driver.findElement(By.xpath("//body/div[11]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/button[1]/span[1]")).click();
+	      
+	      Select Region = new Select(driver.findElement(By.id("RegionId")));
+	      Region.selectByValue("1");
+	      Select Area = new Select(driver.findElement(By.id("AreaId")));
+	      Area.selectByValue("1");
+	      Select Cluster = new Select(driver.findElement(By.id("ClusterId")));
+	      Cluster.selectByValue("1");
 	      driver.findElement(By.id("StreetNumberAdd")).sendKeys("2");
 	      driver.findElement(By.id("ZoneNumberAdd")).sendKeys("4");
 	      driver.findElement(By.id("BuildingNumberAdd")).sendKeys("6");
@@ -112,10 +121,12 @@ public class DDMP_Automation {
 	      driver.findElement(By.id("userName")).sendKeys("James");
 	      driver.findElement(By.id("Address")).sendKeys("Doha");
 	      driver.findElement(By.id("mobile")).sendKeys("50994471");
-	      driver.findElement(By.id("txtEmailId")).sendKeys("james667@rechargeindia.com");
+	      driver.findElement(By.id("txtEmailId")).sendKeys("james669@rechargeindia.com");
 	      driver.findElement(By.id("btn_usersave")).click();
 	      Thread.sleep(6000);
 	      driver.findElement(By.id("partnerUserSave")).click(); // to Save the Users page
+	      
+	     
 }
 
 }
