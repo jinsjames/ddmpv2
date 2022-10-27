@@ -18,7 +18,7 @@ public class DDMP_Automation {
 		System.setProperty("webdriver.chrome.driver","C:\\Automation\\chromedriver_win32\\chromedriver.exe" );
 		WebDriver driver = new ChromeDriver();
 		 driver.get("https://partner-portal-app.azurewebsites.net/");
-		//  driver.manage().window().maximize();
+		 driver.manage().window().maximize();
 		  
 		  //to login
 		  driver.findElement(By.id("txtUsername")).sendKeys("ddmpsitdist1ita@oq-ddmp.recharge365.com");
@@ -44,7 +44,7 @@ public class DDMP_Automation {
 		  WebElement m = driver.findElement(By.xpath("//button[@id='btn_AddPopUp']"));
 		  m.click();
 		  // General tab page
-		  driver.findElement(By.id("sopNames")).sendKeys("Dist1 Merchant13");
+		  driver.findElement(By.id("sopNames")).sendKeys("Dist1 Merchant16");
 		  driver.findElement(By.id("TaxId")).sendKeys("0000000");
 		  
 		  Select Merchant = new Select(driver.findElement(By.id("MerchantTypeId")));
@@ -73,7 +73,7 @@ public class DDMP_Automation {
 		  Select ComType = new Select(driver.findElement(By.id("CompanyTypeId")));
 		  ComType.selectByValue("3");
 		  
-		  driver.findElement(By.id("cr")).sendKeys("8058AUT");
+		  driver.findElement(By.id("cr")).sendKeys("8062AUT");
 //		  driver.findElement(By.id("crExpiryDate")).click();
 //		  driver.findElement(By.id("review-")).sendKeys("06/10/2023");
 //		  
@@ -121,7 +121,7 @@ public class DDMP_Automation {
 	      driver.findElement(By.id("userName")).sendKeys("James");
 	      driver.findElement(By.id("Address")).sendKeys("Doha");
 	      driver.findElement(By.id("mobile")).sendKeys("50994471");
-	      driver.findElement(By.id("txtEmailId")).sendKeys("james669@rechargeindia.com");
+	      driver.findElement(By.id("txtEmailId")).sendKeys("james52@rechargeindia.com");
 	      driver.findElement(By.id("btn_usersave")).click();
 	      Thread.sleep(6000);
 	      driver.findElement(By.id("partnerUserSave")).click(); // to Save the Users page
