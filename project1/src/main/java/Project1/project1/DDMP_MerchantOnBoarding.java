@@ -27,10 +27,7 @@ public class DDMP_MerchantOnBoarding {
 		  driver.findElement(By.id("txtUsername")).sendKeys("ddmpsitdist2ita@oq-ddmp.recharge365.com");
 		  driver.findElement(By.id("txtPassword")).sendKeys("R365@12345");
 		  driver.findElement(By.id("btnLogin")).click();
-		  
-
-		  
-		
+	
 		FileInputStream file = new FileInputStream("C:\\Automation\\ExcelSheets\\MerchantOnboarding.xlsx");
 		
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -45,6 +42,7 @@ public class DDMP_MerchantOnBoarding {
 		wait.until(ExpectedConditions.visibilityOfElementLocated (By.id("btn_AddPopUp")));
 	    WebElement m = driver.findElement(By.id("btn_AddPopUp"));
 		m.click();
+		
 		XSSFRow currentrow = sheet.getRow(i);
 		
 		String MerchantName = currentrow.getCell(0).getStringCellValue();
@@ -86,8 +84,6 @@ public class DDMP_MerchantOnBoarding {
 		  HCategory.selectByValue("3");
 		  
 		  driver.findElement(By.xpath("//body/div[11]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]")).click();
-		  
-		  
 
 		  Select Classification = new Select(driver.findElement(By.id("ClassificationId")));
 		  Classification.selectByValue("1");
